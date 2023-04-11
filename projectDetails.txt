@@ -1,0 +1,161 @@
+/*
+    Package Name: 
+        1.Breeze
+        2.Laravel excel
+        3.bumbummen99 shoppingcart
+        4.barryvdh/laravel-dompdf
+*/
+
+
+1. Lets Make Authentication With Breeze for admin route;
+2. Lets Mastering Admin Panel..
+3. Lets make employees migration & model.and inside employees migration lets have->
+    $table->string('name');
+    $table->string('email');
+    $table->string('phone');
+    $table->string('address');
+    $table->string('experience');
+    $table->string('photo');
+    $table->string('salary');
+    $table->string('vacation');
+    $table->string('city');
+    $table->string('nid_no');
+
+    Lets add employee in the database and fetch them in all employee option and crud them;
+
+4. Lets make customers migration & model. and inside customers migration lets have->
+    $table->string('name');
+            $table->string('email')->nullable();
+            $table->string('phone');
+            $table->string('address');
+            $table->string('shopname')->nullable();
+            $table->string('photo')->nullable();
+            $table->string('account_holder')->nullable();
+            $table->string('account_number')->nullable();
+            $table->string('bank_name')->nullable();
+            $table->string('bank_branch')->nullable();
+            $table->string('city');
+            
+        Lets add customer in the database and fetch them in all customer option and crud them;
+
+    
+5. Lets make suppilers migration & model. and inside customers migration lets have->
+    $table->string('name');
+             $table->string('name');
+            $table->string('email')->nullable();
+            $table->string('phone');
+            $table->string('address');
+            $table->string('type');
+            $table->string('photo')->nullable();
+            $table->string('shop')->nullable();
+            $table->string('account_holder')->nullable();
+            $table->string('account_number')->nullable();
+            $table->string('bank_name')->nullable();
+            $table->string('bank_branch')->nullable();
+            $table->string('city');
+            
+        Lets add suppiler in the database and fetch them in all suppiler option and crud them;
+
+
+6. Lets make advanced_salaries db and put data on it->
+            $table->integer('emp_id');
+            $table->string('month');
+            $table->string('year');
+            $table->string('status')->default('0');
+            $table->string('advanced_salary')->nullable();
+
+    and lets show who gets his advance salary and which month;
+
+7. Lets make salaries db and have db_fields->
+        $table->integer('employee_id');
+        $table->string('salary_month');
+        $table->string('paid_amount');
+
+
+
+8. Lets make category for product.so lets have category migration conntroler and add category in it and show in dashboard and crud it.
+    in db_fields->
+        $table->string('cat_name');
+
+
+9. Lets make product model database and controller for add view all products and crud it.
+    In db_fields->
+            $table->string('product_name');
+            $table->integer('cat_id');
+            $table->integer('sup_id');
+            $table->string('product_code');
+            $table->string('product_garage');
+            $table->string('product_route');
+            $table->string('product_image');
+            $table->string('buy_date');
+            $table->string('expire_date');
+            $table->string('buying_price');
+            $table->string('selling_price');
+
+
+10. Lets make expense model database and controller
+    In db_fields->
+            $table->string('details');
+            $table->string('amount');
+            $table->string('month');
+            $table->string('date');
+
+    And lets crud expense .Today Expense Monthly Expense Yearly Expense with the help of month date year data table; and lets filter every month data with month data table;
+
+11. Lets make attendence model database and controller
+    In db_fields->
+            $table->integer('user_id');
+            $table->string('att_date');
+            $table->string('month');
+            $table->string('att_year');
+            $table->string('attendence');
+            $table->string('edit_date');
+
+    And lets crud attendence .Today Attendence Monthly Attendence Yearly Attendence with the help of month date year data table; and lets filter every month data with month data table;
+
+
+12. Lets do website settings option 
+    In db_fields->
+            $table->string('company_name');
+            $table->string('company_address');
+            $table->string('company_email');
+            $table->string('company_phone');
+            $table->string('company_logo');
+            $table->string('company_mobile');
+            $table->string('company_city');
+            $table->string('company_country');
+            $table->string('company_zipcode');
+    And lets import data in those fields;
+
+
+13. Lets import products in database with the help of laravel excel package;
+
+14. Lets Design Pos page..in this page lets have products and lets add them in cart + lets do total of amount and redirect to invoice page.For Cart lets use Bumbummen Package.
+
+15. Lets Have a PDF Download option in invoice.
+16. Lets have orderdetails DB;In DB_table->
+            $table->integer('order_id');
+            $table->integer('product_id');
+            $table->string('quantity');
+            $table->string('unitcost');
+            $table->string('total');
+
+17. Lets have orders DB;In DB_table->
+            $table->integer('customer_id');
+            $table->string('order_date');
+            $table->string('order_status');
+            $table->string('total_products');
+            $table->string('sub_total');
+            $table->string('vat');
+            $table->string('total');
+            $table->string('payment_status');
+            $table->string('pay')->nullable();
+            $table->string('due')->nullable();
+
+Lets bring all data in order table with a function in controller and then in same function lets add all data in orderdetails and lets destroy cart and by doing order complete lets bring back to home page;
+
+18. Lets Have pending order and success order with the help of order_status data table;
+
+19. Lets Do PDF download of  Invoice with barryvdh/laravel-dompdf package;
+
+20. We can Have Sales report.(everyday,month,year just like expense);
