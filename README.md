@@ -11,10 +11,17 @@ Customer data management
 Reporting and analytics for business insights
 
 #Installation
+
 Clone the repository from github
+
 cd pos-software 
+
 composer install
+
 npm install && npm run dev
+
 php artisan key:generate
+
 php artisan migrate
+
 php artisan serve
